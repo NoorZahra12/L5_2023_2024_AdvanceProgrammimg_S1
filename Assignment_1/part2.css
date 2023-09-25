@@ -1,0 +1,26 @@
+.container{
+    display: grid;
+    border-top: 3px solid red;
+    border-left: 3px solid blue;
+    padding: 20px;
+
+    /*the gap of both column and row*/
+    gap: 10px;
+
+    /*changing the gap of row only while the column's gap remains the same*/
+    row-gap: 7px;
+
+    /*changing the size of the columns
+    first column being the bigger
+    second column being  half the size of the first column*/
+    grid-template-columns: 300px 150px;
+
+    /*putting different sizes for the first 3 rows*/
+    grid-template-rows: 150px 100px 50px;
+}
+
+.items{
+    background-color: lightblue;
+    padding: 5px;
+    border: 1px solid green;
+}

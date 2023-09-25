@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/*using grid in the parent class*/
+.parent{
+    margin: 10px;
+    display: grid;
+    background-color: aqua;
+}
+
+/*selecting all the divs inside the parent class*/
+.parent div{
+    background-color: lightblue;
+    border: 1px solid green;
+}
+
+/*changing the order of the grid in reverse order*/
+.one{
+    order: 5;
+}
+.two{
+    order: 4;
+}
+.three{
+    order: 3;
+}
+.four{
+    order: 2;
+}
+.five{
+    order: 1;
+}

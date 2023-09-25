@@ -1,0 +1,70 @@
+body{
+    padding: 0;
+    margin: 0;
+    height:500px;
+    background-image: url(neon_cyberpunk_city.jpg);
+    background-size: cover;
+}
+
+.glass{
+    width: 900px;
+    height: 400px;
+    /*to center the div*/
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    /*styling the div*/
+    border: 2px solid white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.553);
+    border-radius: 10px;
+    /*adding a linear gradient in the bg of the div*/
+    background: linear-gradient(rgba(255, 0, 0, 0.34),rgba(0, 0, 255, 0.444));
+    backdrop-filter: blur(3px);
+    /*styling the div for the texts inside*/
+    padding: 30px;
+}
+
+h1{
+    text-wrap: wrap;
+    width: 300px;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    text-align: center;
+    margin: auto;
+}
+
+.texts{
+    background-color: rgba(255, 255, 255, 0.274);
+    padding: 20px;
+    border-radius: 20px;
+}
+.list{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    
+}
+
+.list img{
+    height: 200px;
+    border-radius: 50%;
+}
+
+.anchors{
+    padding-left: 30%;
+    padding-top: 10px;
+}
+
+.anchors button{
+    margin: auto;
+    height: 50px;
+    width: 150px;
+    border-radius: 30px;
+    background-color: white;
+    padding: 7px;
+}
+
+.anchors button img{
+    height: 25px;
+}

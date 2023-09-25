@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 30px;
+        }
+        div{
+            border-radius: 20px;
+            background-color: rgb(152, 216, 255);
+            padding: 30px;
+            border: 2px solid blue;
+            width: 300px;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 70, 0.61);
+            margin: 20px;
+        }
+
+        .filled,.stretch{
+            border: 10px solid blue;
+        }
+
+        .filled{
+            border-image:url(border.png) 30 30 round;
+
+        }
+        .stretch{
+            border-image:url(border.png) 40 30 stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="filled">
+        the border image is repeated to fill the area
+    </div>
+    <div class="stretch">
+        the border image is stretched in the box
+    </div>
+    <div>
+        the image used is
+        <img src="border.png" alt="img" height="80px">
+    </div>
+</body>
+</html>
