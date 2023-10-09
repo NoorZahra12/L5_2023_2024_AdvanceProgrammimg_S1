@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.Flexbox Wrapping</title>
+</head>
+<style>
+    .container{
+    /*the flex direction is rows by default so the items
+    inside the container will be displayed in a row*/
+    display: flex;
+
+    /*if the width of the container is less all the items
+    inside the container will overlap or get out the container's border*/
+    width: 150px;
+
+    /*however with flex wrapping if there isn't enough room in the first row
+    it will put it in the next row and make sure it is inside the flexbox container*/
+    flex-wrap: wrap;
+    gap: 1px;
+    border: 2px dotted rgb(0, 4, 255);
+    }
+
+    .box{
+        background-color: rgb(140, 247, 255);
+        width: 100px;
+        border: 2px solid rgb(0, 179, 0);
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">one</div>
+        <div class="box">two</div>
+        <div class="box">three</div>
+        <div class="box">four</div>
+        <div class="box">five</div>
+    </div>
+</body>
+</html>

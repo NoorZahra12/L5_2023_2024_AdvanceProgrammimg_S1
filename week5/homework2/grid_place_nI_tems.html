@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Grid placing and grid items</title>
+</head>
+<style>
+    .container{
+    border: 2px solid rgb(5, 87, 230);
+    background-color: rgb(133, 243, 255);
+    padding: 5px;
+    display: grid;
+    gap: 10px;
+    row-gap: 7px;
+    /*adding 3 columns and 6 rows all with same size by using fr*/
+    /*fr will expand as much free space there is inside the container*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    }
+
+    .container div{
+        background-color: rgb(228, 198, 255);
+        border: 1px solid blueviolet;
+        padding: 5px;
+    }
+    .one{
+        /*it means to stay in column 1*/
+        grid-column: 1;
+        /*it means to start from row 1 and span 3 rows*/
+        grid-row: 1/ span 3;
+    }
+    .six{
+        /*it means to start from column 2 and span 2 columns*/
+        grid-column: 2/ span 2;
+        grid-row: 3;
+    }
+    .eight{
+        /*it means to start from column 2 and span 2 columns*/
+        grid-column: 2/ span 2;
+        /*it means to start from row 4 and span 2 rows*/
+        grid-row: 4/ span 2;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="one">one</div>
+        <div class="two">two</div>
+        <div class="three">three</div>
+        <div class="four">four</div>
+        <div class="five">five</div>
+        <div class="six">six</div>
+        <div class="seven">seven</div>
+        <div class="eight">eight</div>
+        <div class="nine">nine</div>
+        <div class="ten">ten</div>
+        <div class="eleven">eleven</div>
+        <div class="twelve">twelve</div>
+    </div>
+</body>
+</html>

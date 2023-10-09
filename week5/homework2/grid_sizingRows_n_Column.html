@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.Grid sizing. Rows and Columns</title>
+</head>
+<style>
+    .container{
+    border: 3px solid rgb(57, 0, 171);
+    background-color: rgb(203, 166, 255);
+    padding: 5px;
+    display: grid;
+    gap: 10px;
+    row-gap: 7px;
+    /*making the width of the 2nd and 4th column twice 
+    as big as the 1st and 3rd column*/
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    /*writing the length or height of the 3 rows*/
+    grid-template-rows: 150px 100px 200px;
+    }
+
+    .box{
+        background-color: rgb(254, 201, 255);
+        border: 2px solid rgb(241, 90, 193);
+        padding: 5px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">one</div>
+        <div class="box">two</div>
+        <div class="box">three</div>
+        <div class="box">four</div>
+        <div class="box">five</div>
+        <div class="box">six</div>
+        <div class="box">I'm making this longer</div>
+        <div class="box">eight</div>
+        <div class="box">nine</div>
+        <div class="box">ten</div>
+        <div class="box">eleven</div>
+        <div class="box">twelve</div>
+    </div>
+</body>
+</html>
