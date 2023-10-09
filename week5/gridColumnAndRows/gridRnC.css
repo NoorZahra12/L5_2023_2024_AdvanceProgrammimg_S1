@@ -1,0 +1,14 @@
+.container{
+    border: 3px solid black;
+    padding: 5px;
+    display: grid;
+    gap: 10px;
+    row-gap: 7px;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    grid-template-rows: 100px 50px 150px;
+}
+
+.box{
+    background-color: rgb(228, 198, 255);
+    padding: 5px;
+}

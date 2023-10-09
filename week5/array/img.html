@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var bannerImg = new Array();
+        bannerImg[0]="earth.gif";
+        bannerImg[1]="img2.jpg";
+        bannerImg[2]="img3.jpg";
+
+        var newBanner=0;
+        var totalBanner=bannerImg.length;
+
+        function cycleBan(){
+            newBanner++;
+            if(newBanner==totalBanner){
+                newBanner=0;
+            }
+            document.banner.src=bannerImg[newBanner];
+            setTimeout("cycleBan()", 3*1000);
+        }
+        window.onload=cycleBan;
+
+    </script>
+</body>
+</html>

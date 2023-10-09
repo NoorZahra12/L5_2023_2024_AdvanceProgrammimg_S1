@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/*using grid in the parent class*/
+.parent{
+    margin: 10px;
+    display: grid;
+    background-color: aqua;
+}
+
+/*selecting all the divs inside the parent class*/
+.child{
+    background-color: rgb(200, 173, 230);
+}

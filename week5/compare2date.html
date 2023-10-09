@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myDate = new Date();
+        myDate.setFullYear(2023,10,4);
+        var today = new Date();
+        if(myDate>today)
+        {
+            alert("Today is before my date");
+        }
+        else if(myDate==today)
+        {
+            alert("Today is also my date");
+        }
+        else
+        {
+            alert("Today is after my date");
+        }
+    </script>
+</body>
+</html>
