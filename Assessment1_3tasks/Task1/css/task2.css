@@ -1,0 +1,33 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: white;
+    width: 100%;
+}
+header img{
+    width: 4%;
+    margin: 10px;
+}
+
+.imgcontainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+img{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    object-fit: cover;
+}
+.texts{
+    padding: 10px;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
