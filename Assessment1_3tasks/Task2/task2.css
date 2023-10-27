@@ -53,11 +53,10 @@ nav ul li {
 
 
 /* The main page */
-
 main{
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 2fr, repeat(2,1fr);
     grid-template-rows: repeat(2, 1fr);
     width: 1000px;
     gap: 7px;
@@ -70,12 +69,12 @@ main{
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.322);
 }
 
-.moviebox:first-child{
+/* .moviebox:first-child{
     padding: 0;
     grid-column: 1 / span 3;
     grid-row: 1 / span 2;
 
-}
+} */
 #avengers h2, #avengers p, #avengers button{
     margin: 8px;
 }
@@ -95,7 +94,7 @@ button{
     border: none;
     padding: 7px;
 }
- 
+
 h2{
     font-size: larger;
 }

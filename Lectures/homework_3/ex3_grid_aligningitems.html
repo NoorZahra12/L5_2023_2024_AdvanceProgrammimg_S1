@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,1fr);
+            border: 2px solid black;
+            height: 500px;
+            /* placing all children both vertically and horizontally in center */
+            place-items: center;
+
+        }
+        /* all children inside the parent */
+        .container div{
+            background-color: rgb(194, 165, 221);
+            border: 1px solid red;
+            padding: 2px;
+        }
+
+        /* using justify for horizontal and making it stretch */
+        #two{
+            justify-self: stretch;
+        }
+
+        /* vertically it is center and on horizontal it is left because "start" is vertically top and horizontally left by default
+        it will not go top as i wrote center in vertical place */
+        #four{
+            place-self: center start;
+        }
+
+        /* using align for vertical and making it stretch vertically only */
+        #five{
+            align-self: stretch;
+        }
+
+        /* end is vertically bottom and horizontally right
+        but i want the horizontal to be mid so i wrote center on the second part to make it horizontally mid */
+        #six{
+            place-self: end center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="one">one</div>
+        <div id="two">two</div>
+        <div id="three">three</div>
+        <div id="four">four</div>
+        <div id="five">five</div>
+        <div id="six">six</div>
+        <div id="seven">seven</div>
+        <div id="eight">eight</div>
+        <div id="nine">nine</div>
+        <div id="ten">ten</div>
+        <div id="eleven">eleven</div>
+        <div id="twelve">twelve</div>
+    </div>
+</body>
+</html>

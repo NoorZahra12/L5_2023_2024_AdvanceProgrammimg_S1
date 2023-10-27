@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+    <style>
+        .box{
+            display: flex;
+            align-items:center;
+            height: 200px;
+        }
+        .box div{
+            background-color: lightblue;
+            border: 1px solid green;
+        }
+        .box div:first-child {
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+        <div>five</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            height: 500px;
+            /* making it grid parent */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        .container div{
+            background-color: rgb(194, 165, 221);
+            border: 1px solid red;
+            padding: 3px;
+        }
+
+        /* top left
+         start is vertically top and horizontally left by default */
+        #one{
+            place-self: start;
+        }
+
+        /* top center */
+        /* start is top left by default so I'm adding center after it so it's top and center */
+        /* so start is top in vertical and horizontally it is left
+        therefore top left */
+        /* however i need it to be on the top but not on left side */
+        /* i will enter 2 things: start and center . first one for it's vertical function and second one for horizontal property*/
+        /* in vertical part i wrote start as start's vertical part is top */
+        /* for the horizontal part i wrote center to make it horizontal in the mid part */
+        #two, #three{
+            place-self: start center;
+        }
+
+        /* top right */
+        /* start is top left by default and end is bottom right by default */
+        /* putting start first to make it vertically top and wrote end for making it horizontally right(without going bottom) */
+        #four{
+            place-self: start end;
+        }
+
+        /* start is top left so i will write center start to make it  center(not top) left*/
+        /* it's like using start for top left except removing the default top setting by writing center so it is mid left */
+        /* vertically it is mid and horizontally it is left */
+        #five{
+            place-self: center start;
+        }
+        
+        /* placing it in center */
+        #six,#seven{
+            place-self: center;
+        }
+        
+        /* bottom left*/
+        /* end is bottom right */
+        /* start is top left */
+        /* so writing end for the bottom part and writing start second for the left part */
+        #nine{
+            place-self: end start;
+        }
+
+        /* bottom vertically but in horizontally center instead of right */
+        #ten,#eleven{
+            place-self: end center;
+        }
+
+        /* first center vertically then making it right */
+        #eight{
+            place-self: center end;
+        }
+
+        /* end is vertically bottom right by default */
+        #twelve{
+            place-self: end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="one">one</div>
+        <div id="two">two</div>
+        <div id="three">three</div>
+        <div id="four">four</div>
+        <div id="five">five</div>
+        <div id="six">six</div>
+        <div id="seven">seven</div>
+        <div id="eight">eight</div>
+        <div id="nine">nine</div>
+        <div id="ten">ten</div>
+        <div id="eleven">eleven</div>
+        <div id="twelve">twelve</div>
+    </div>
+</body>
+</html>

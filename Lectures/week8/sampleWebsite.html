@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    margin: 0;
+    padding: 0;
+    /* the words will break the letters in a new line if the word cannot fit. 
+    instead of the last few letters of the word getting hidden */
+    /* basically wrapping them and making sure they stay inside their divs or tags */
+    word-wrap: break-word;
+}
+
+header{
+    background-color: rgb(76, 210, 255);
+    display: flex;
+    justify-content: space-between;
+}
+header .logo{
+    font-size: 24px;
+    padding: 10px;
+    /* using align for vertical and making it center */
+    align-self: center;
+}
+nav ul{
+    font-size: large;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin-right: 5px;
+}
+nav ul li{
+    background-color: rgb(192, 239, 255);
+    padding: 5px;
+    border-radius: 40px;
+}
+
+main{
+    display: flex;
+}
+aside{
+    width: 30vw;
+    background-color: rgb(169, 169, 255);
+    padding: 10px;
+
+}
+section{
+    width: 70vw;
+    background-color: cornflowerblue;
+    padding: 20px;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(76, 210, 255);
+    padding: 5px;
+}
+</style>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <ul>
+                <li>one</li>
+                <li>two</li>
+                <li>three</li>
+                <li>four</li>
+                <li>five</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <h2>sidebar</h2>
+            this is a sidebar 
+            <ol>
+                <li>Lorem, ipsum.</li>
+                <li>Itaque, eligendi!</li>
+                <li>Nisi, vitae.</li>
+                <li>Error, possimus!</li>
+                <li>Dolorum, iste?</li>
+                <li>Qui, repellat.</li>
+                <li>Natus, officiis.</li>
+                <li>Praesentium, repellat?</li>
+                <li>Perferendis, perspiciatis?</li>
+                <li>Rerum, quisquam.</li>
+            </ol>
+        </aside>
+        <section>
+            <h1>Heading</h1>
+            <article>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt voluptate, deserunt odit harum vero amet, corporis, minus tenetur consequatur hic vel libero nulla excepturi iste quisquam aliquam vitae veritatis officiis!
+            </article>
+            <article>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt voluptate, deserunt odit harum vero amet, corporis, minus tenetur consequatur hic vel libero nulla excepturi iste quisquam aliquam vitae veritatis officiis!
+            </article>
+            <article>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt voluptate, deserunt odit harum vero amet, corporis, minus tenetur consequatur hic vel libero nulla excepturi iste quisquam aliquam vitae veritatis officiis!
+            </article>
+        </section>
+    </main>
+    <footer>I am a footer</footer>
+</body>
+</html>

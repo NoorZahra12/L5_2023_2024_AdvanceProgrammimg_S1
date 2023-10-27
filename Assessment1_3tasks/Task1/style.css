@@ -1,0 +1,114 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(246, 246, 246);
+    /* wrapping the words and letters, if the words can't fit they will break into half and continue in next line */
+    word-wrap: break-word;
+    /* hiding any horizontal overflow to avoid the horizontal scrollbar */
+    overflow-x: hidden;
+}
+
+/* the page's width will be 100% 
+except when it is above 800px in media query then it's width will be fixed at 800px */
+.page{
+    width: 100%;
+}
+
+/* styling the header */
+header{
+    background-color: white;
+    width: 100%;
+}
+
+/* making this class div a container/parent by using display grid */
+.imgcontainer{
+    display: grid;
+    /* 3 columns */
+    grid-template-columns: repeat(3, 1fr);
+    /* 4 rows */
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* setting the size of the images to fit the grid size perfectly */
+img{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    object-fit: cover;
+}
+.texts{
+    padding: 10px;
+}
+
+/* styling the footer */
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+/*-------------------------------------- Task 1 -----------------------------------------*/
+/* greater than 1024px */
+@media (width > 1024px) {
+
+    /* page fixed width and using margin auto to add margin on both sides equally to make it horizontally center */
+    .page{
+        margin: auto;
+        width: 1024px;
+    }
+
+    /* logo */
+    header img{
+        width: 5%;
+        margin: 5px;
+    }
+}
+
+/*--------------------------------------- Task 2 -------------------------------------------*/
+/* between 800px-1024px */
+@media (800px <= width <= 1024px) {
+    /* logo */
+    header img{
+        width: 6%;
+        margin: 5px;
+    }
+}
+
+/*--------------------------------------- Task 3 -------------------------------------------*/
+/* between 480px-800px */
+@media (480px <= width <= 800px) {
+    /* logo */
+    header img{
+        width: 7%;
+        margin: 5px;
+    }
+    
+    /* changing the templates of grid colum and rows*/
+    .imgcontainer{
+        /* 2 columns */
+        grid-template-columns: repeat(2, 1fr);
+        /* 3 rows */
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+}
+
+/*--------------------------------------- Task 4 -------------------------------------------*/
+/* if width of the screen is less than 480px */
+@media (480px > width) {
+
+    header img{
+        width: 30px;
+        margin: 5px;
+    }
+    
+    .imgcontainer{
+        /* 1 column */
+        grid-template-columns: repeat(1, 1fr);
+        /* 6 rows */
+        grid-template-rows: repeat(6, 1fr);
+    }
+}

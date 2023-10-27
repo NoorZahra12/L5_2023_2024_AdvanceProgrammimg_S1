@@ -15,6 +15,9 @@ Please view the following video for reference given in the folder.
  8. The header and footer background colour is #8ccff7.
  9. The circle and row hover color is #444.
  10. Footer height is 50px. */
+
+
+
 body{
   padding: 0;
   margin: 0;
@@ -30,7 +33,7 @@ body{
 .gridwrapper{
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 25px);
   margin-top: 30px;
 }
 
