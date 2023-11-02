@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<style>
+    html{
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    *{
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    *:before{
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+    }
+
+    *:after{
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+    }
+    .column{
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+    }
+    .row{
+        padding-top: 10px;
+    }
+    .row::after{
+        content:"";
+        clear: both;
+        display: table;
+    }
+    .card{
+        -webkit-box-shadow:0 4px 8px 0 rbga(0,0,0,0.2);
+        box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .container{
+        padding: 0 16px;
+    }
+    .container::after{
+        content:"";
+        clear: both;
+        display: table;
+    }
+    h1{
+        color: grey;
+    }
+    button{
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+    }
+    button:hover{
+        background-color: #555;
+    }
+
+    @media screen and (max-width: 650px){
+        .column{
+            width: 100%;
+            display: block;
+        }
+    }
+</style>
+<body>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="" alt="">
+                <div class="container">
+                    <h1>im a title</h1>
+                    <p>hello</p>
+                    <button>im a button</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="" alt="">
+                <div class="container">
+                    <h1>title 2</h1>
+                    <p>hello</p>
+                    <button>im a button</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -2,17 +2,13 @@
 body{
     padding: 0;
     margin: 0;
+    word-wrap: break-word;
 }
 
 /* styling the header*/
 header{
-    display: flex;
-    padding: 0 20px 0 20px;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    padding: 5px;
 }
-
 header .logo{
     color: white;
     font-size:xx-large;
@@ -22,6 +18,13 @@ header,button{
     background-color: dodgerblue;
 }
 
+#containav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:98%;
+    margin: auto;
+}
 .search{
     width: 300px;
     margin: auto;
@@ -37,12 +40,7 @@ header,button{
 nav ul {
     list-style: none;
     display: flex;
-    float: left;
-}
-
-/*creating a distance betweeen the items in list*/
-nav ul li {
-    margin-right: 15px;
+    gap: 15px;
 }
 
 /*styling*/
@@ -54,31 +52,24 @@ nav ul li {
 
 /* The main page */
 main{
+    width: 60%;
     margin: auto;
     display: grid;
-    grid-template-columns: 2fr, repeat(2,1fr);
+    grid-template-columns: 2.5fr 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
-    width: 1000px;
     gap: 7px;
 }
 
+main:nth-child(3) img{
+    width: 400px;
+    height: 300px;
+}
 .moviebox{
     padding: 10px;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.096);
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.322);
 }
-
-/* .moviebox:first-child{
-    padding: 0;
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 2;
-
-} */
-#avengers h2, #avengers p, #avengers button{
-    margin: 8px;
-}
-
 
 img{
     width: 100%;
