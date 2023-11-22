@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation with js</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            color: aliceblue;
+            margin: 0;
+            padding: 0;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="hello">Hello</div>
+    <script>
+        var ol = 0;
+        var isPlaying = false;
+        var circleInterval;
+        var el = document.getElementById("hello");
+        var sc = 1;
+
+        function circleAnimation() {
+            ol++;
+            sc++;
+            el.style.left = ol + "px";
+            el.style.fontSize = sc + "px";
+
+            // Check if font size is 500px and stop the animation
+            if (sc >= 500) {
+                stopAnimation();
+                return;
+            }
+
+            circleInterval = requestAnimationFrame(circleAnimation);
+        }
+
+        function stopAnimation() {
+            isPlaying = false;
+            document.getElementById("hello").style.color = "red";
+            cancelAnimationFrame(circleInterval);
+        }
+
+        function startAnimation() {
+            isPlaying = true;
+            document.getElementById("hello").style.color = "blue";
+            circleInterval = requestAnimationFrame(circleAnimation);
+        }
+
+        function mouseClicked() {
+            if (isPlaying) {
+                stopAnimation();
+            } else {
+                startAnimation();
+            }
+        }
+
+        document.getElementById("hello").addEventListener("click", mouseClicked);
+        document.getElementById("hello").style.color = "green";
+    </script>
+</body>
+</html>

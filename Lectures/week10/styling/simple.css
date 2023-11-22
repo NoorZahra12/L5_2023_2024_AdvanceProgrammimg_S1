@@ -1,0 +1,25 @@
+.cont ul li {
+  background-color: skyblue;
+  color: green;
+}
+
+.c1 {
+  background-color: yellow;
+  text-align: center;
+  border: 1px;
+}
+
+.c2 {
+  background-color: pink;
+  text-align: center;
+  border: 1px;
+}
+
+.c3, .c4 {
+  color: brown;
+  background-color: lightsalmon;
+}
+
+.c4 {
+  color: blueviolet;
+}/*# sourceMappingURL=simple.css.map */
