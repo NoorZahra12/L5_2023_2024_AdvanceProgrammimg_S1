@@ -1,0 +1,43 @@
+div {
+  margin: 10px;
+}
+
+.square1 {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 0;
+}
+
+.square2 {
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 0;
+}
+
+.square3 {
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 0;
+}
+
+.square4 {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 0;
+}
+
+.square5 {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 0;
+}/*# sourceMappingURL=style.css.map */

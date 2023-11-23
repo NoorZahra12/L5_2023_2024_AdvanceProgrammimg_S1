@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+      margin: 10px;
+    }
+
+    .square1 {
+      background-color: dodgerblue;
+      width: 150px;
+      height: 150px;
+      position: relative;
+      left: 0;
+    }
+
+    .square2 {
+      background-color: blueviolet;
+      width: 100px;
+      height: 100px;
+      position: relative;
+      left: 0;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="square1"></div>
+    <div class="square2"></div>
+    <div class="square3"></div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" 
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        anime({
+            targets:'.square1',
+            left:100,
+            duration:1000,
+            direction: 'alternate',
+            loop: true,
+            left:{
+                value:300,
+                duration:1000,
+            },
+            opacity:{
+                value:0.5,
+                duration:500,
+            },
+            rotate:{
+                value:360,
+                delay:1000,
+                duration:1000,
+            },
+            complete: function(){
+                anime({
+                    targets: '.square1',
+                    left:0,
+                    duration:1000,
+                    // delays
+                    delay:300,
+                    easing:'linear',
+                })
+            }
+        })
+        
+        anime({
+            targets:'.square2',
+            left:600,
+            duration:1000,
+            complete: function(){
+                document.querySelector('.square2').style.borderRadius = '50%';
+                anime({
+                    targets: '.square2',
+                    // opposite of delay
+                    enddelay:300,
+                    loop:true,
+                    left:0,
+                    duration:1000,
+                    easing:'linear',
+                    direction:'reverse',
+                })
+            }
+        }).finished.then(function(){
+            anime({
+                targets:'.square3',
+                top:400,
+                easing:'linear',
+                duration:1000,
+            })
+        });
+
+
+
+    </script>
+</body>
+</html>

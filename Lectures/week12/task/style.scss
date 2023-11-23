@@ -1,0 +1,27 @@
+@mixin theme($t: red){
+    background-color: $t;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 0;
+}
+
+div{
+    margin: 10px
+}
+
+.square1{
+    @include theme();
+}
+.square2{
+    @include theme(orange);
+}
+.square3{
+    @include theme(yellow);
+}
+.square4{
+    @include theme(green);
+}
+.square5{
+    @include theme(blue);
+}
