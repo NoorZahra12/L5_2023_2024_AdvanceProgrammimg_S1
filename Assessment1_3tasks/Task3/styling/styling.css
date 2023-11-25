@@ -64,6 +64,7 @@ footer {
 }
 
 .circles {
+  margin: auto;
   margin: 10px;
   display: flex;
   justify-content: center;
@@ -114,7 +115,7 @@ footer {
 
 #rect1:hover, #rect2:hover, #rect3:hover, #rect4:hover, #c1:hover, #c2:hover, #c3:hover, #c4:hover {
   background-color: #444;
-  transition: 0.1s;
+  transition: 0.5s;
   cursor: pointer;
 }
 

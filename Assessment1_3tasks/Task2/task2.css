@@ -1,6 +1,8 @@
+/* starting with 0 margin and padding */
 body{
     padding: 0;
     margin: 0;
+    /* breaking the words and wrapping it inside */
     word-wrap: break-word;
     background: #cccccc;
 }
@@ -12,10 +14,14 @@ h2{
 }
 
 header{
+    /* making header a flex container */
     display: flex;
     padding: 5px;
+    /* spacing the children evenly in x axis */
     justify-content: space-between;
+    /* centering in x axis */
     justify-items: center;
+    /* centering in y axis */
     align-items: center;
 }
 header h1{
@@ -37,11 +43,13 @@ header,button{
 }
 .search{
     width: 250px;
+    /* vertically center by adding margin on the sides equally */
     margin: auto;
-    background-color: white;
+    /* text color */
     color: gray;
     border: 2px solid gray;
     padding: 10px;
+    background-color: white;
 }
 
 /* hiding the menu button as default and will display it when the screen width is smaller later ono in media queries*/
@@ -73,29 +81,48 @@ main{
 
 /* this is the first container */
 .avengers{
-    width: calc(150%);
+    /* normally writing any number above 100 doesn't work but it works with calc() :) */
+    width: calc(130%);
+    /* making .avengers a container */
     display: flex;
+    /* wrapping all the children inside the container */
     flex-wrap: wrap;
 }
 
+
 .card{
     background-color: #fff;
+    /* making sure the height doesn't expand more than necessary */
     height: fit-content;
+    /* rounding those borders */
     border-radius: 2px;
+    /* adding a borderline */
     border: 1px solid rgba(0, 0, 0, 0.096);
+    /* Aadding some shadow */
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.322);
-    padding-bottom: 30px;
+    /* padding inside the div at bottom */
+    padding-bottom: 50px;
 
 }
 .card .info{
+    /* adding some space inside the text div */
     padding: 10px;
 }
 
 
 /* this is the second container which has 4 items inside it */
 .container_of_fourmovies{
+    /* usually id i write 100% in both the child of main
+    the 2 containers will take 50/50 space inside main
+    but i wrote 120% in the avengers using calc so it won't be s 50/50
+    and it will take a little more space , but if i don't write 100% here
+    it's gonna have a mind of it's own and take as much space as it wants which i dont want to happen*/
     width: 100%;
+    /* making a grid parent (tried flex but wasn't sure how t get the children 
+    to be 2 in each row or 1 in each row later in media query without having to change 
+    the width of the children so i'm using grid just for my own convenience)*/
     display: grid;
+    /* gap between the children in grid */
     gap: 10px;
 }
 
@@ -137,12 +164,11 @@ footer{
     main{
         width: 1280px;
     }
-
-
     .container_of_fourmovies{
+        /* adding 2 columns with 1fr sizes */
         grid-template-columns: repeat(2, 1fr);
+        /* adding 2 rows with 1fr sizes */
         grid-template-rows: repeat(2, 1fr);
-
     }
 }
 
@@ -152,8 +178,8 @@ footer{
 /* Second size */
 
 @media (1280px > width > 1024px) {
-    
     .container_of_fourmovies{
+        /* 2 rows and 1 column being 1 fr size n take space equally based on available free space */
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
@@ -169,12 +195,13 @@ footer{
 
 
 @media (1024px > width > 800px) {
-
     .container_of_fourmovies{
         width: calc(60%);
     }
     .container_of_fourmovies{
+        /* changing it to 1 column with 1fr size */
         grid-template-columns: repeat(1, 1fr);
+        /* 4 rows with the size being 1fr meaning taking as much space as wanted */
         grid-template-rows: repeat(4, 1fr);
 
     }
@@ -190,6 +217,7 @@ footer{
         display: block;
     }
     main{
+        /* displaying children vertically */
         flex-direction: column;
     }
     .search{
@@ -198,13 +226,16 @@ footer{
 
     /* dropdown */
     .dropdown{
+        /* y axis center */
         align-self: center;
+        /* x axis center */
         justify-self: center;
         position: relative;
     }
     .dropdown_menu{
         color: #000;
         display: none;
+        /* displayed on top */
         position: absolute;
         right: 0;
         top: calc(100% + 16px);
@@ -219,6 +250,7 @@ footer{
     }
     
     .container_of_fourmovies{
+        /* 2 columns and 2 rows */
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
@@ -238,6 +270,7 @@ footer{
         display: block;
     }
     main{
+        /* will show all items in vertical direction */
         flex-direction: column;
     }
 
@@ -255,7 +288,9 @@ footer{
         color: #000;
         display: none;
         position: absolute;
-        right: 0;
+
+        right: -15px;
+        /* can't write numbers like 110% normally so using calc() */
         top: calc(100% + 16px);
         background-color: #ffffff;
         line-height: 30px;
@@ -264,6 +299,7 @@ footer{
     
     }
     .dropdown:hover .dropdown_menu{
+        /* from display none to display block */
         display: block;
     }
     .container_of_fourmovies{

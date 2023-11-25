@@ -17,8 +17,6 @@ Please view the following video for reference given in the folder.
  10. Footer height is 50px. */
 
 
-
-
  // storing a color code for bg
  $bg_color: #efeff1;
  // making body have 0 padding and margin and also giving it a bg color by using variable
@@ -81,6 +79,13 @@ $smallscreen: 480px;
     
     // using @else if to check if the argument is written 'medium'
     @else if $size == 'medium' {
+        // so using ($smallscreen > width > $largescreen) did not work only for the this one.
+        // that's why i have to write min width and mas width for it to work
+        // using (width < $smallscreen) or (width > $largescreen) works but it didn't 
+        // look nice in the code that I'm using width greater than and less than in the other 
+        // two sizes while i'm using min-width and max width in the medium one so i switched to all 
+        // min and max width just to match it but i'd do rather prefer using width and greater than or 
+        // less than sign for readibility and easy to understand
         @media (min-width: $smallscreen) and (max-width: $largescreen){
             @content;
         }
@@ -88,6 +93,8 @@ $smallscreen: 480px;
         
     // using @else if to check if the argument is written 'large'
     @else if $size == 'large' {
+        // checking if the argument is 'large'
+        // if it is true using media qury and @content to add whatever changes in any element
         @media (min-width: $largescreen) {
             @content;
         }
@@ -96,17 +103,22 @@ $smallscreen: 480px;
     
 // Selecting the element and calling the mixin for media query handling
 #pic {
+    // including mixin and writing small as argument to type the changes in small screensize
     @include responsive_header('small') {
+        // only want to change the background image and it's size while making sure it remains a square
         background-image: $header_image_small;
+        // the height and width of the image will be 200px
         @include squareshape(200px);
     }
     
     @include responsive_header('medium') {
+        // only want to change the background image and it's size while making sure it remains a square
         background-image: $header_image_medium;
         @include squareshape(300px);
     }
         
     @include responsive_header('large') {
+        // only want to change the background image and it's size while making sure it remains a square
         background-image: $header_image_large;
         @include squareshape(400px);
     }
@@ -121,7 +133,7 @@ header{
 }
 footer{
     height: $footerHeight;
-        // the picture class has 100% width and the bg color is same as header
+    // the picture class has 100% width and the bg color is same as header
     // so using @extend so i won't have to type them again and using the same width n bgcolor of header
     @extend header;
 }
@@ -132,10 +144,13 @@ footer{
 }
 
 .circles{
-        margin: 10px;
+    margin: auto;
+    // adding a margin around the circle container and centering everything inside container
+    margin: 10px;
     @include centeringstuff()
 }
 
+// rows and circles which have the same color
 #rect1,#c1{
     background-color:$color1;
 }
@@ -150,10 +165,10 @@ footer{
 }
     
 
-
-    #c1{
-        @include makeround(70px);
-    }
+// setting the size of each circle
+#c1{
+    @include makeround(70px);
+}
 #c2{
     @include makeround(80px);
 }
@@ -163,13 +178,14 @@ footer{
 #c4{
     @include makeround();
 }
+
 // HOVERING
 // adding the hovering color
 #rect1:hover,#rect2:hover,#rect3:hover,#rect4:hover,#c1:hover,#c2:hover,#c3:hover,#c4:hover{
     // changing the background color on hover
     background-color: $hoverColor;
     // adding transition effect to slowly change the color
-    transition: 0.1s;
+    transition: 0.5s;
     // thiss will change the cursor from showing an arrow to pointing hand when hovering
     cursor: pointer;
 }
@@ -178,34 +194,7 @@ footer{
 // if the below is above 620, the circles will be stacked vertically.
 @media(width < 620px){
     .circles{
+        // showing the circles in vertical direction
         flex-direction: column;
     }
 }
-
-
-
-// the media query for header
-// @media(width > 800px){
-//   #pic{
-//     background-image: $header_image_large;
-//     width: 400px;
-//     height: 400px;
-//   }
-// }
-
-// @media(800px > width > 480px){
-  
-//   #pic{
-//     background-image: $header_image_medium;
-//     width: 300px;
-//     height: 300px;
-//   }
-// }
-
-// @media(width < 480px){
-//   #pic{
-//     background-image: $header_image_small;
-//     width: 200px;
-//     height: 200px;
-//   }
-// }
