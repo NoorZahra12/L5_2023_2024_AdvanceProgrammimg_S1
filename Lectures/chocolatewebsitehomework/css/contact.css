@@ -1,0 +1,93 @@
+/* starting with empty padding and no margin in body*/
+body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    background: #FBF2EB;
+    color: white;
+    text-align: center;
+    word-wrap: break-word;
+    background-image: url(../pics/seamless-pattern-background.jpg);
+    background-size: 300px, auto, contain;
+
+    /* using flex just so i can use the position:sticky property on the header */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* styling the header*/
+  header {      
+    background-color: rgb(37, 11, 0);
+    display: flex;
+    padding: 0 5px 0 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    
+    /* this will help stick to the top even when you scroll */
+    position: sticky;
+    top: 0;
+  }
+  
+  header .logo {
+    font-size: x-large;
+    color: white;
+  }
+  
+  /* navigation */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+  
+  /*styling the buttons*/
+  nav ul li {
+    border: 1px solid chocolate;
+    padding: 7px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  nav ul li:hover {
+    background-color: rgba(151, 67, 14, 0.507);
+    cursor: pointer;
+  }
+  
+  /* 3 buttons */
+  .btns3{
+    display: flex;
+    gap: 10px;
+  }
+  .btns3 img{
+    width: 25px;
+  }
+  
+  
+  
+  
+  /* MAIN */
+  main{
+    width: 70%;
+    background-color: rgba(116, 90, 80, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px rgb(83, 54, 31);
+    margin: auto;
+    padding: 16px;
+    border:5px double;
+  }
+footer{
+    padding: 5px;
+    margin-top: 10px;
+    background-color: rgb(37, 11, 0);
+}
+
+main h1{
+    text-decoration: underline wavy;
+    color: rgb(37, 11, 0) ;
+}
