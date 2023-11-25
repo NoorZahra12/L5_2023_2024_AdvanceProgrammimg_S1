@@ -280,7 +280,9 @@ footer{
     
     /* dropdown */
     .dropdown{
+        /* y axis */
         align-self: center;
+        /* x axis */
         justify-self: center;
         position: relative;
     }
